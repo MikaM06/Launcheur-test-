@@ -9,7 +9,7 @@ function createWindow() {
 
   mainWindow = new BrowserWindow({
     menu: false,
-    title: "Pentagone II Launcher",
+    title: "Test Launcher",
     icon: path.join(__dirname, "./assets/images/ICON_ROND/PentagoneII-IconLogo-Blanc_RondBleu.png"),
     resizable: true,
     width: 1300,

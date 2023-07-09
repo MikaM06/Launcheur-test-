@@ -1,9 +1,9 @@
 {
-  "name": "pentagone2launcher",
-  "productName": "Pentagone II Launcher",
+  "name": "testlauncheur",
+  "productName": "Test",
   "version": "1.0.5",
   "internalVersion": "13111110.4",
-  "description": "Pentagone II Launcher",
+  "description": "Ce launcheur, est a bute des test",
   "main": "index.js",
   "scripts": {
     "test": "electron .",

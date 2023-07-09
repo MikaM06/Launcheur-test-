@@ -15,8 +15,8 @@ console.log("%cCopier-coller quelque chose dictée par un inconnu risque forteme
 // --------------------
 
 // Constantes
-const tallName = "Pentagone II"
-const smallName = "pentagone2"
+const tallName = "Test"
+const smallName = "test"
 
 const appVersion = package.version
 const currentOS = os.platform
@@ -174,7 +174,7 @@ async function index() { // Si le Launcher est à Jour
     if (localStorage.getItem("accessToken")) {
 
         var loginToken = {
-            url: "https://pentagone2.fr/api/auth/verify",
+            url: "https://www.undercraft.fr/api/auth/verify",
             method: "POST",
             timeout: 0,
             data: {

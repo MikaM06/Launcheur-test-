@@ -16,8 +16,8 @@ const errorText = document.getElementById("error")
 // --------------------
 
 // Var & Const
-const gameFileName = ".pentagone2" ///// A MODIFIER avec <.nomduserveur>
-const smallName = "pentagone2" ////// A MODIFIER avec <nomduserveur>
+const gameFileName = ".undercraft"
+const smallName = "undercraft"
 var modpackLink = null
 var fullData
 var xVal = 0
@@ -26,7 +26,7 @@ var xVal = 0
 let launchOpts
 var modpack = {
     method: 'post',
-    url: 'http://minecraft-launcher.ml/servers/' + smallName + '/update/update.json',
+    url: 'https://www.dropbox.com/s/5p52t13i54ikvbj/ModPacks.zip?dl=1',
 };
 // --------------------
 
@@ -40,7 +40,7 @@ axios(modpack)
         modpackLink = response.data.game
     })
     .catch(function (error) {
-        console.log("%c[Launcher]" + "%c [Updater]" + "%c Unable to load the Modpack ZIP file : " + error, "color: blue; font-weight: 1000", "color: black; font-weight: 700", "color: black; font-weight: 100");
+        console.log("%c[Launcher]" + "%c [Updater]" + "%c Unable to load the Modpack ZIP file: " + error, "color: blue; font-weight: 1000", "color: black; font-weight: 700", "color: black; font-weight: 100");
     })
 
 ipc.on("data", (event, data) => {
@@ -96,7 +96,7 @@ ipc.on("data", (event, data) => {
             root: fullData.appData + "/" + gameFileName + "/",
             removePackage: true,
             version: {
-                number: "1.16.5",
+                number: "1.7.10",
                 type: "release"
             },
             forge: fullData.appData + "/" + gameFileName + "/forge.jar",
@@ -108,14 +108,12 @@ ipc.on("data", (event, data) => {
 
     } else { // Opts pour macOS
 
-        setTimeout(launch, 3000)
-
         launchOpts = {
-            authorization: Authenticator.getAuth(localStorage.getItem("aToken"), localStorage.getItem("cToken")),
+            authorization: Authenticator.getAuth(localStorage.getItem("username")),
             root: fullData.appData + "/" + gameFileName + "/",
             removePackage: true,
             version: {
-                number: "1.16.5",
+                number: "1.7.10",
                 type: "release"
             },
             forge: fullData.appData + "/" + gameFileName + "/forge.jar",
@@ -166,7 +164,7 @@ ipc.on("data", (event, data) => {
     launcher.on("data", (e) => {
         console.log(e)
 
-        if (e.includes("[Render thread/INFO]")) {
+        if (e.includes("[Render thread/INFO]") || e.includes("[Client thread/INFO]")) {
             if (localStorage.getItem("keepLauncherOpen") && localStorage.getItem("keepLauncherOpen") == "false") {
                 ipc.send("quit")
             } else {
@@ -333,6 +331,8 @@ async function launch() {
 
                 then()
                 async function then() {
+
+                    await sleep(2000)
 
                     try {
 
