@@ -1,6 +1,4 @@
-# Tout version détourner de cette version de test est passable de grosses sanctions. Oui ce launcheur fonctionne par le systéme d'auth de Undercraft, mais n'est pas crée pour faire une version cheat. Et le modpack mis est sans les mods. Donc inutile de l'utilser pour crée un launcheur cheat.
+## Toute tentative de détourner cette version de test entraînera de graves sanctions. Oui, ce launcher fonctionne avec le système d'authentification d'Undercraft, mais il n'est pas conçu pour créer une version triche. De plus, le modpack fourni ne contient pas de mods. Par conséquent, il est inutile de l'utiliser pour créer un lanceur de triche. Il est important de souligner que de telles actions sont strictement interdites.
 
-## Ceci, est interdit.
-
-### Launcheur baser sur Pantagone II (Abbandoned) and Goldfrite.
+### Launcher based on Pantagone II (Abandoned) and Goldfrite.
 
